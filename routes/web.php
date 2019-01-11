@@ -52,4 +52,6 @@ Route::group(['prefix' => 'admin'] , function(){
 	Route::get('/portofolio/edit/{id}', 'AdminController@editportofolio');
 	Route::get('/portofolio/update', 'AdminController@updateportofolio');
 	Route::get('/portofolio/delete/{id}', 'AdminController@deleteportofolio');
+	Route::get('about','AboutController@index');
+	Route::post('about/save','AboutController@save');
 });
