@@ -9,7 +9,7 @@ Edit Kelebihan
       <div class="card">
         <div class="card-header text-white" style="background-color: #F26E00">Edit Portofolio</div>
         <div class="card-body">
-         <form action="{{url('admin/kelebihan/save')}}" method="POST" enctype="multipart/form-data">
+         <form action="{{url('admin/portofolio/save')}}" method="POST" enctype="multipart/form-data">
           <div class="form-group">
             <label for="formGroupExampleInput">Judul</label>
             <input type="text" class="form-control" name="judul" id="formGroupExampleInput" 
