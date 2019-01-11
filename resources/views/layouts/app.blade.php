@@ -18,6 +18,10 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+<<<<<<< HEAD
+=======
+    <link href="{{ asset('fontawesome-free-5.6.3-web/css/fontawesome.css') }}" rel="stylesheet">
+>>>>>>> ffede100b17fac25fbb81b7721f538df55cecbda
     <link href="{{ asset('fontawesome-free-5.6.3-web/css/all.css') }}" rel="stylesheet">
 </head>
 <body>

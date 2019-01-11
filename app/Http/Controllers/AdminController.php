@@ -151,6 +151,7 @@ class AdminController extends Controller
     public function saveportofolio(Request $r)
     {
     	$n = new Portofolio;
+        $n->id = request('q');
     	$n->judul = $r->input('judul');
     	$n->keterangan = $r->input('keterangan');
 
