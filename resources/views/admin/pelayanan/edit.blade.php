@@ -9,7 +9,8 @@ Edit Pelayanan
       <div class="card">
         <div class="card-header text-white" style="background-color: #F26E00">Edit Pelayanan</div>
         <div class="card-body">
-         <form action="{{url('admin/pelayanan/save')}}" method="POST" enctype="multipart/form-data">
+         <form action="{{url('admin/pelayanan/update')}}" method="POST" enctype="multipart/form-data">
+          <input type="hidden" name="id" value="{{$pelayanan->id}}">
           <div class="form-group">
             <label for="formGroupExampleInput">Judul</label>
             <input type="text" class="form-control" name="judul" id="formGroupExampleInput" 
@@ -23,7 +24,7 @@ Edit Pelayanan
           <div class="form-group">
             <label for="formGroupExampleInput">Gambar</label>
             <input type="file" class="form-control" name="gambar" id="formGroupExampleInput" 
-            placeholder="Pengarang" required>
+            placeholder="Pengarang">
           </div>
           @csrf
           <button class="btn btn-outline-success float-right" type="submit">Tambah Data</button>
