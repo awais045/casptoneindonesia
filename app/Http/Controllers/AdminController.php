@@ -81,7 +81,7 @@ class AdminController extends Controller
 
     public function indexpelayanan()
     {
-    	return view('admin.index.pelayanan');
+    	return view('admin.pelayanan.index');
     }
 
     public function addpelayanan()
@@ -140,7 +140,7 @@ class AdminController extends Controller
 
     public function indexportofolio()
     {
-    	return view('admin.index.portofolio');
+    	return view('admin.portofolio.index');
     }
 
     public function addportofolio()
@@ -168,7 +168,7 @@ class AdminController extends Controller
 
     public function editportofolio($id)
     {
-    	$kelebihan = Portofolio::find($id);
+    	$portofolio = Portofolio::find($id);
     	return view('admin.portofolio.edit')->with('portofolio',$portofolio);
     }
 

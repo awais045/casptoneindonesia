@@ -7,7 +7,7 @@ Edit Kelebihan
   <div class="row justify-content-center">
     <div class="col-md-8">
       <div class="card">
-        <div class="card-header">Edit Kelebihan</div>
+        <div class="card-header text-white">Edit Kelebihan</div>
         <div class="card-body">
          <form action="{{url('admin/kelebihan/update')}}" method="POST" enctype="multipart/form-data">
           <div class="form-group">

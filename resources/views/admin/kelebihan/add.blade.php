@@ -7,7 +7,7 @@ Add Kelebihan
   <div class="row justify-content-center">
     <div class="col-md-8">
       <div class="card">
-        <div class="card-header">Kelebihan</div>
+        <div class="card-header text-white">Kelebihan</div>
         <div class="card-body">
          <form action="{{url('admin/kelebihan/save')}}" method="POST" enctype="multipart/form-data">
           <div class="form-group">

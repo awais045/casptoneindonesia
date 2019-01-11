@@ -50,6 +50,8 @@
                             @endif
                         @else
                         <li><a class="nav-link" href="{{ url('admin/kelebihan') }}">{{ __('Kelebihan') }}</a></li>
+                        <li><a class="nav-link" href="{{ url('admin/pelayanan') }}">{{ __('Pelayanan') }}</a></li>
+                        <li><a class="nav-link" href="{{ url('admin/portofolio') }}">{{ __('Portofolio') }}</a></li>
                         <li><a class="nav-link" href="{{ url('admin/about') }}">{{ __('About') }}</a></li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
