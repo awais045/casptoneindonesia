@@ -10,41 +10,24 @@
                     Who are in extremely love with eco friendly system..
                 </p>
             </div>
-        </div>                      
+        </div>     
+        <?php
+        	$pelayanan = \App\Pelayanan::all(); 
+        ?>   
         <div class="row">
+        @foreach($pelayanan as $q)           
             <div class="col-lg-4">
                 <div class="single-service">
                     <div class="thumb">
-                        <img src="{{ asset ('industry/img/s1.jpg')}}" alt="">                                   
+                        <img src="{{ url('images/'.$q->gambar)}}" alt=""><!--src="{{ url('gambar/',$q->gambar)}}" -->                                
                     </div>
-                    <h4>Automotive Engineering</h4>
+                    <h4>{{$q->judul}}</h4>
                     <p>
-                        inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct women face higher conduct.
+                        {{$q->keterangan}}}
                     </p>
                 </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="single-service">
-                    <div class="thumb">
-                        <img src="{{ asset ('industry/img/s2.jpg')}}" alt="">                                   
-                    </div>
-                    <h4>Construction & Engineering</h4>
-                    <p>
-                        inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct women face higher conduct.
-                    </p>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="single-service">
-                    <div class="thumb">
-                        <img src="{{ asset ('industry/img/s3.jpg')}}" alt="">                                   
-                    </div>
-                    <h4>Industrial Engineering</h4>
-                    <p>
-                        inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct women face higher conduct.
-                    </p>
-                </div>
-            </div>                                              
+            </div>                                            
+        @endforeach
         </div>
     </div>  
 </section>
