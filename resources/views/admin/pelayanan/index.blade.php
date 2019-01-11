@@ -5,10 +5,7 @@ Pelayanan
 @section('content')
 <div class="container">
   <div class="row justify-content-center">
-    <div class="col-md-8">
-      <div class="card">
-        <div class="card-header text-white" style="background-color: #F26E00">Daftar Pelayanan</div>
-        <div class="card-body">
+    <div class="col md-8">
           <div class="table-responsive">
           <table class="table" id="example">
           <thead>
@@ -32,9 +29,9 @@ Pelayanan
               <td>{{$q->keterangan}}</td>
               <td><img src="{{ url('images/'.$q->gambar) }}" style="width: 50px; height: 50px"></td>
               <td>
-                <a href="{{url('admin/pelayanan/edit/'.$q->id)}}" class="btn btn-outline-warning btn-sm">Edit</a>
+                <a href="{{url('admin/pelayanan/edit/'.$q->id)}}" class="btn btn-outline-warning btn-sm"><i class="fas fa-pen"></i></a>
                  <a href="{{url('admin/pelayanan/delete/'.$q->id)}}" onclick="return confirm('anda yakin untuk menghapusnya ?')" 
-                 class="btn btn-outline-danger btn-sm">Delete</a>
+                 class="btn btn-outline-danger btn-sm"><i class="fas fa-trash"></i></a>
               </td>
             </tr>
             @endforeach
@@ -42,12 +39,8 @@ Pelayanan
         </table>
         </div>
         <hr>
-        <li class="list-group-item float-left">
-          <a href="{{url('admin/pelayanan/add')}}" class="btn btn-outline-primary">Tambah</a>
-        </li>
+          <a href="{{url('admin/pelayanan/add')}}" class="btn btn-outline-primary btn-lg"><i class="fas fa-plus-square"></i></a>
       </div>
     </div>
   </div>
-</div>
-</div>
 @endsection
