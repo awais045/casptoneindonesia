@@ -20,6 +20,9 @@ Route::get('/portofolio', function(){
 Route::get('/service', function(){
 	return view('service');
 });
+Route::get('/about', function(){
+	return view('about');
+});
 
 Auth::routes();
 
