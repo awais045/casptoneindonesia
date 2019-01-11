@@ -1,0 +1,337 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use Auth;
+use Illuminate\Support\Facades\Input;
+
+class AdminController extends Controller
+{
+	public function __construct()
+	{
+		$this->middleware('auth');
+	}
+
+	public function index(){
+		return view('admin.index');
+	}
+
+	public function jadwalibadah(){
+		$data = \App\JadwalIbadah::all();
+		return view('admin.jadwalibadah')->with('data',$data);
+	}
+	public function formjadwalibadah()
+	{
+		return view('admin.addjadwalibadah');
+	}
+	public function addjadwalibadah(Request $r)
+	{
+		$nama = $r->nama;
+		$jam = $r->jam;
+		$hari = $r->hari;
+
+		$tambahjadwal = new \App\JadwalIbadah();
+		$tambahjadwal->nama = $nama;
+		$tambahjadwal->jam = $jam;
+		$tambahjadwal->hari = $hari;
+		$tambahjadwal->save();
+
+		return redirect('admin/jadwalibadah');
+	}
+	public function deletejadwalibadah($id)
+	{
+		$ibadah = \App\JadwalIbadah::find($id);
+		$ibadah->delete();
+
+		return redirect()->back();
+	}
+
+	public function editjadwalibadah($id)
+	{
+		$ibadah = \App\JadwalIbadah::find($id);
+		return view('admin.editjadwalibadah', compact('ibadah'));
+	}
+	public function updatejadwalibadah(Request $r)
+	{
+		$id = $r->id;
+		$nama = $r->nama;
+		$jam = $r->jam;
+		$hari = $r->hari;
+
+		$ibadah = \App\JadwalIbadah::find($id);
+		$ibadah->nama = $nama;
+		$ibadah->jam = $jam;
+		$ibadah->hari = $hari;
+		$ibadah->save();
+
+		return redirect('admin/jadwalibadah');
+	}
+
+	public function ringkasankhotbah(){
+		$data = \App\RingkasanKhotbah::all();
+		return view('admin.ringkasankhotbah')->with('data',$data);
+	}
+
+	public function addringkasankhotbah(){
+		return view('admin.addringkasankhotbah');
+	}
+
+	public function saveringkasankhotbah(Request $r){
+		$data = new \App\RingkasanKhotbah;
+		$data->judul = $r->judul;
+		$data->pembicara = $r->pembicara;
+		$data->isi = $r->isi;
+		$data->penerbit = Auth::user()->name;
+		if(Input::hasFile('foto')){
+			$foto = date("YmdHis")
+			.uniqid()
+			."."
+			.Input::file('foto')->getClientOriginalExtension();
+			Input::file('foto')->move(storage_path('images'),$foto);
+			$data->filefoto = $foto;
+		}
+		$data->save();
+		return redirect('admin/ringkasankhotbah');
+	}
+
+	public function deleteringkasankhotbah($id){
+		$data = \App\RingkasanKhotbah::find($id);
+		$data->delete();
+		return redirect('admin/ringkasankhotbah');
+	}
+
+	public function editringkasankhotbah($id){
+		$data = \App\RingkasanKhotbah::find($id);
+		return view('admin.editringkasankhotbah')->with('data',$data);
+	}
+
+	public function updateringkasankhotbah(Request $r){
+		$data =  \App\RingkasanKhotbah::find($r->id);
+		$data->judul = $r->judul;
+		$data->pembicara = $r->pembicara;
+		$data->isi = $r->isi;
+		$data->penerbit = Auth::user()->name;
+		if(Input::hasFile('foto')){
+			$foto = date("YmdHis")
+			.uniqid()
+			."."
+			.Input::file('foto')->getClientOriginalExtension();
+			Input::file('foto')->move(storage_path('images'),$foto);
+			$data->filefoto = $foto;
+		}
+		$data->save();
+		return redirect('admin/ringkasankhotbah');		
+	}
+
+	public function artikelrohani(){
+		$data = \App\ArtikelRohani::all();
+		return view('admin.artikelrohani')->with('data',$data);
+	}
+	public function addartikelrohani(){
+		return view('admin.addartikelrohani');
+	}
+	public function saveartikelrohani(Request $r){
+		$data = new \App\ArtikelRohani;
+		$data->judul = $r->judul;
+		$data->isi = $r->isi;
+		$data->sumber = $r->sumber;
+		if(Input::hasFile('foto')){
+			$foto = date("YmdHis")
+			.uniqid()
+			."."
+			.Input::file('foto')->getClientOriginalExtension();
+			Input::file('foto')->move(storage_path('images'),$foto);
+			$data->filefoto = $foto;
+		}
+		$data->save();
+		return redirect('admin/artikelrohani');
+	}
+
+	public function editartikelrohani($id){
+		$data = \App\ArtikelRohani::find($id);
+		return view('admin.editartikelrohani')->with('data',$data);
+	}
+	public function updateartikelrohani(Request $r){
+		$data =  \App\ArtikelRohani::find($r->id);
+		$data->judul = $r->judul;
+		$data->isi = $r->isi;
+		$data->sumber = $r->sumber;
+		if(Input::hasFile('foto')){
+			$foto = date("YmdHis")
+			.uniqid()
+			."."
+			.Input::file('foto')->getClientOriginalExtension();
+			Input::file('foto')->move(storage_path('images'),$foto);
+			$data->filefoto = $foto;
+		}
+		$data->save();
+		return redirect('admin/artikelrohani');		
+	}
+
+	public function deleteartikelrohani($id){
+		$data = \App\ArtikelRohani::find($id);
+		$data->delete();
+		return redirect('admin/artikelrohani');		
+	}
+	public function pelayan(){
+		$data = \App\Pelayan::where('id',1)->first();
+		$data2 = \App\UlangTahun::all();
+		return view('admin.pelayan')->with('data',$data)->with('data2',$data2);
+	}
+
+	public function updatepelayan(Request $r){
+		$data = \App\Pelayan::find(1);
+		$data->tanggal = $r->tanggal;
+		$data->penerimatamu = $r->penerimatamu;
+		$data->persembahan = $r->persembahan;
+		$data->kostum = $r->kostum;
+		$data->save();
+		return redirect('admin/pelayan');
+	}
+
+	public function addulangtahun(){
+		return view('admin.addulangtahun');
+	}
+
+	public function postulangtahun(Request $r){
+		$data = new \App\UlangTahun;
+		$data->nama = $r->nama;
+		$data->tanggal = $r->tanggal;
+		$data->save();
+		return redirect('admin/pelayan');
+	}
+
+	public function deleteulangtahun($id){
+		$data = \App\UlangTahun::find($id);
+		$data->delete();
+		return redirect('admin/pelayan');
+
+	}
+
+	public function doakeselamatan(){
+		$data1 = \App\PengantarPD::where('id',1)->first();
+		$data2 = \App\PengantarKeselamatan::where('id',1)->first();
+		$data3 = \App\PermohonanDoa::all();
+		$data4 = \App\Keselamatan::all();
+		return view('admin.doakeselamatan')->with('data1',$data1)->with('data2',$data2)->with('data3',$data3)->with('data4',$data4);
+	}
+
+	public function updatepengantarpd(Request $r){
+		$data = \App\PengantarPD::find(1);
+		$data->katapengantar = $r->katapengantar;
+		$data->ayat = $r->ayat;
+		$data->isiayat = $r->isiayat;
+		$data->save();
+		return redirect('admin/doakeselamatan');
+	}
+
+	public function updatepengantarkeselamatan(Request $r){
+		$data = \App\PengantarKeselamatan::find(1);
+		$data->katapengantar = $r->katapengantar;
+		$data->ayat = $r->ayat;
+		$data->isiayat = $r->isiayat;
+		$data->save();
+		return redirect('admin/doakeselamatan');
+	}
+
+	public function deletepermohonandoa($id){
+		$data = \App\PermohonanDoa::find($id);
+		$data->delete();
+		return redirect('admin/doakeselamatan');
+	}
+	public function deletekeselamatan($id){
+		$data = \App\Keselamatan::find($id);
+		$data->delete();
+		return redirect('admin/doakeselamatan');
+	}
+
+	public function gallery(){
+		$data = \App\Gallery::all();
+		return view('admin.gallery')->with('data',$data);
+	}
+
+	public function addgallery(){
+		return view('admin.addgallery');
+	}
+	public function postgallery(Request $r){
+		$data = new \App\Gallery;
+		$data->nama = $r->nama;
+		$data->keterangan = $r->keterangan;
+		if(Input::hasFile('foto')){
+			$foto = date("YmdHis")
+			.uniqid()
+			."."
+			.Input::file('foto')->getClientOriginalExtension();
+			Input::file('foto')->move(storage_path('images'),$foto);
+			$data->file = $foto;
+		}
+		$data->save();
+		return redirect('admin/gallery');		
+	}
+	public function deletegallery($id){
+		$data = \App\Gallery::find($id);
+		$data->delete();
+		return redirect('admin/gallery');	
+	}
+
+	public function editprofile(){
+		$data = \App\Profile::where('id',1)->first();
+		$bapakgembala = \App\Gembala::where('id',1)->first();
+		$ibugembala = \App\Gembala::where('id',2)->first();
+		$tentang = \App\Gembala::where('id',3)->first();
+		return view('admin.editprofile')->with('data',$data)->with('bapakgembala',$bapakgembala)->with('ibugembala',$ibugembala)->with('tentang',$tentang);
+	}
+
+	public function postprofile(Request $r){
+		$data = \App\Profile::find(1);
+		$data->name = $r->name;
+		$data->email = $r->email;
+		$data->notelp = $r->notelp;
+		$data->facebook = $r->facebook;
+		$data->save();
+		return redirect('admin/editprofile');
+	}
+	public function updatebapakgembala(Request $r){
+		$data = \App\Gembala::find(1);
+		$data->nama = $r->nama;
+		$data->keterangan = $r->keterangan;
+		if(Input::hasFile('foto')){
+			$foto = date("YmdHis")
+			.uniqid()
+			."."
+			.Input::file('foto')->getClientOriginalExtension();
+			Input::file('foto')->move(storage_path('images'),$foto);
+			$data->filefoto = $foto;
+		}
+		$data->save();
+		return redirect('admin/editprofile');
+
+	}
+	public function updateibugembala(Request $r){
+		$data = \App\Gembala::find(2);
+		$data->nama = $r->nama;
+		$data->keterangan = $r->keterangan;
+		if(Input::hasFile('foto')){
+			$foto = date("YmdHis")
+			.uniqid()
+			."."
+			.Input::file('foto')->getClientOriginalExtension();
+			Input::file('foto')->move(storage_path('images'),$foto);
+			$data->filefoto = $foto;
+		}
+		$data->save();
+		return redirect('admin/editprofile');
+
+	}
+	public function updatetentang(Request $r){
+		$data = \App\Gembala::find(3);
+		$data->keterangan = $r->keterangan;
+		$data->save();
+		return redirect('admin/editprofile');
+
+	}
+
+
+}
+
