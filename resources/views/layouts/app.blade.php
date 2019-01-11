@@ -18,6 +18,8 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('fontawesome-free-5.6.3-web/css/fontawesome.css') }}" rel="stylesheet">
+    <link href="{{ asset('fontawesome-free-5.6.3-web/css/all.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
