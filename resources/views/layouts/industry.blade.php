@@ -70,7 +70,7 @@
 										<li><a href="#">Blog Single</a></li>
 									</ul>
 								</li>						          
-								<li><a href="#">Contact</a></li>
+								<li><a href="{{ url('contact')}}">Contact</a></li>
 								<li><a href="#">Elements</a></li>
 							</ul>
 						</nav><!-- #nav-menu-container -->		    		
