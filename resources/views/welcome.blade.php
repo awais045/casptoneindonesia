@@ -51,13 +51,13 @@ height:200px;
         ?>             
         <div class="row">
             @foreach ($kelebihan as $q)
-            <div class="col-lg-4">
-                <div class="single-cat d-flex flex-column" id="backgroud">
+            <div class="col-md-3">
+                <div class="single-cat d-flex flex-column" id="backgroud" style="width: auto;height: auto;">
                     <!-- <a href="#" class="hb-sm-margin mx-auto d-block"><span class="hb hb-sm inv hb-facebook-inv"><span class="lnr lnr-magic-wand"></span></span></a> -->
                     <img class="bulat hb-sm-margin mx-auto d-block" src="{{url('images/'.$q->gambar)}}">
                     <h4 class="mb-20" style="margin-top: 23px;">{{$q->judul}}</h4>
                     <p>
-                        {{$q->keterangan}}
+                        {!!$q->keterangan!!}
                     </p>
                 </div>                                                       
             </div>

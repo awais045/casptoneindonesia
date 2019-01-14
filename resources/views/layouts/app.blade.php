@@ -10,8 +10,6 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-    <script type="text/javascript" src="ckeditor/ckeditor.js"></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -22,8 +20,6 @@
     <link href="{{ asset('fontawesome-free-5.6.3-web/css/fontawesome.css') }}" rel="stylesheet">
     <link href="{{ asset('fontawesome-free-5.6.3-web/css/all.css') }}" rel="stylesheet">
 
-    <script src="{{ asset('vendor/unisharp/laravel-ckeditor/ckeditor.js')}}"></script>
-    <script>CKEDITOR.replace('ckeditor');</script>
 </head>
 <body>
     <div id="app">
@@ -60,9 +56,10 @@
                         <li><a class="nav-link" href="{{ url('admin/portofolio') }}">{{ __('Portofolio') }}</a></li>
                         <li><a class="nav-link" href="{{ url('admin/slideshow') }}">{{ __('Slideshow') }}</a></li>              
                         <li><a class="nav-link" href="{{ url('admin/about') }}">{{ __('About') }}</a></li>
-                        <li><a class="nav-link" href="{{ url('admin/about2') }}">{{ __('About2') }}</a></li>
+                        <li><a class="nav-link" href="{{ url('admin/about2') }}">{{ __('Footer') }}</a></li>
                         <li><a class="nav-link" href="{{ url('admin/newsletter') }}">{{ __('Newsletter') }}</a></li>
-                        <li><a class="nav-link" href="{{ url('admin/datauser') }}">{{ __('Data User') }}</a></li>
+                        <li><a class="nav-link" href="{{ url('admin/client') }}">{{ __('Client') }}</a></li>
+                        <li><a class="nav-link" href="{{ url('admin/teknologi') }}">{{ __('Teknologi') }}</a></li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
@@ -90,6 +87,11 @@
             @yield('content')
         </main>
     </div>
+
+<script src="{{asset('vendor/unisharp/laravel-ckeditor/ckeditor.js')}}"></script>
+<script>
+    CKEDITOR.replace( 'ckeditor' );
+</script>
 
 </body>
 </html>
