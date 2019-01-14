@@ -4,7 +4,7 @@
 		<!-- Mobile Specific Meta -->
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<!-- Favicon-->
-		<link rel="shortcut icon" href="{{ asset ('industry/img/fav.png')}}">
+		<link rel="shortcut icon" href="{{ asset ('industry/img/logoo.png')}}">
 		<!-- Author Meta -->
 		<meta name="author" content="codepixer">
 		<!-- Meta Description -->
@@ -29,6 +29,7 @@
 			<link rel="stylesheet" href="{{ asset ('industry/css/animate.min.css')}}">
 			<link rel="stylesheet" href="{{ asset ('industry/css/owl.carousel.css')}}">
 			<link rel="stylesheet" href="{{ asset ('industry/css/main.css')}}">
+			<link rel="stylesheet" href="{{ asset ('css/pelayanan.css')}}">
 		</head>
 		<body>	
 			<header id="header" id="home">
@@ -37,10 +38,10 @@
 						<div class="row">
 							<div class="col-lg-6 col-sm-6 col-4 header-top-left no-padding">
 								<ul>
-									<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-									<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-									<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-									<li><a href="#"><i class="fa fa-behance"></i></a></li>
+									<li><a href="https://id-id.facebook.com/capstoneindonesia/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+									<li><a href="https://twitter.com/capstoneindonesia" target="_blank"><i class="fa fa-twitter"></i></a></li>
+									<li><a href="http://capstoneindonesia.net/" target="_blank"><i class="fa fa-chrome"></i></a></li>
+									<li><a href="https://instagram.com/capstoneindonesia?utm_source=ig_profile_share&igshid=ujupo9hirzy5" target="_blank"><i class="fa fa-instagram"></i></a></li>
 								</ul>
 							</div>
 							<?php
@@ -64,14 +65,7 @@
 								<li><a href="{{url('/about')}}">About</a></li>
 								<li><a href="{{url('/service')}}">Service</a></li>
 								<li><a href="{{url('/portofolio')}}">Portofolio</a></li>
-								<li class="menu-has-children"><a href="">Blog</a>
-									<ul>
-										<li><a href="#">Blog Home</a></li>
-										<li><a href="#">Blog Single</a></li>
-									</ul>
-								</li>						          
 								<li><a href="{{ url('contact')}}">Contact</a></li>
-								<li><a href="#">Elements</a></li>
 							</ul>
 						</nav><!-- #nav-menu-container -->		    		
 					</div>
@@ -86,16 +80,20 @@
 					<div class="row">
 						<div class="col-lg-5 col-md-6 col-sm-6">
 							<div class="single-footer-widget">
-								<?php
-								$about2 = \App\About2::where('id',1)->first();
-								?>
+								
 								<h6>About Us</h6>
 								<p>
-									<h1>{{$about2->pengantar1}}</h1>
+<<<<<<< HEAD
+=======
+									<h1 style="color: white;">{{$about2->pengantar1}}</h1>
+>>>>>>> 4c399ac5731fbfaab11c56c26650c37517666c50
 									<br>
-									{{$about2->pengantar2}}
+									<p style="color: white;">{{$about2->pengantar2}}
 									<br>
-									{{$about2->pengantar3}}
+<<<<<<< HEAD
+=======
+									{{$about2->pengantar3}}</p>
+>>>>>>> 4c399ac5731fbfaab11c56c26650c37517666c50
 								</p>
 								<p class="footer-text">
 									<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
@@ -125,7 +123,7 @@
 								<div class="footer-social d-flex align-items-center">
 									<a href="https://id-id.facebook.com/capstoneindonesia/" target="_blank"><i class="fa fa-facebook"></i></a>
 									<a href="https://twitter.com/capstoneindonesia" target="_blank"><i class="fa fa-twitter"></i></a>
-									<a href="http://capstoneindonesia.net/" target="_blank"><i class="fa fa-dribbble"></i></a>
+									<a href="http://capstoneindonesia.net/" target="_blank"><i class="fa fa-chrome"></i></a>
 									<a href="https://instagram.com/capstoneindonesia?utm_source=ig_profile_share&igshid=ujupo9hirzy5" target="_blank"><i class="fa fa-instagram"></i></a>
 								</div>
 							</div>

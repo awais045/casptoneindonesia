@@ -1,4 +1,7 @@
 @extends('layouts.industry')
+@section('title')
+Portofolio
+@endsection
 @section('content')
 <section class="project-area section-gap" id="project">
     <div class="container">

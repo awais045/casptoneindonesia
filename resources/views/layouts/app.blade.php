@@ -11,6 +11,7 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script type="text/javascript" src="ckeditor/ckeditor.js"></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -20,6 +21,9 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('fontawesome-free-5.6.3-web/css/fontawesome.css') }}" rel="stylesheet">
     <link href="{{ asset('fontawesome-free-5.6.3-web/css/all.css') }}" rel="stylesheet">
+
+    <script src="{{ asset('vendor/unisharp/laravel-ckeditor/ckeditor.js')}}"></script>
+    <script>CKEDITOR.replace('ckeditor');</script>
 </head>
 <body>
     <div id="app">
@@ -85,5 +89,6 @@
             @yield('content')
         </main>
     </div>
+
 </body>
 </html>

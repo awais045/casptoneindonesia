@@ -9,7 +9,7 @@ About
       <div class="card">
         <div class="card-header">About 2</div>
         <div class="card-body">
-         <form action="{{url('admin/about2/save')}}" method="POST" enctype="multipart/form-data"><?php
+         <form action="{{url('admin/about2/update')}}" method="POST" enctype="multipart/form-data"><?php
               $i= 1;
               $about2 = \App\About2::all();
               ?>
