@@ -17,7 +17,7 @@ Add Pelayanan
   <div class="form-group">
     <label>Gambar</label>
     <label for="inputAddress"></label>
-    <input type="file" class="form-control" name="gambar[]" id="upload" multiple>
+    <input type="file" class="form-control" name="gambar" id="upload">
   </div>
 
 

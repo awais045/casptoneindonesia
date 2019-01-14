@@ -15,7 +15,7 @@ Edit Pelayanan
 
   <div class="form-group">
     <label for="inputAddress">Gambar</label>
-    <input type="file" class="form-control" name="gambar[]" id="upload" value="{{$pelayanan->gambar}}" multiple>
+    <input type="file" class="form-control" name="gambar" id="upload" value="{{$pelayanan->gambar}}">
   </div>
 
       <div class="form-group col-md-25">
@@ -26,6 +26,7 @@ Edit Pelayanan
 
   <br>
   <hr>
+  <input type="hidden" name="id" value="{{$pelayanan->id}}">
   <button type="submit" class="btn btn-primary btn-lg"><i class="fas fa-pen"></i></button>
   @csrf
 </form>

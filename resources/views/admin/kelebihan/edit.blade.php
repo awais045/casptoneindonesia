@@ -18,7 +18,7 @@ Edit Kelebihan
 
       <div class="form-group">
           <label for="inputAddress">Gambar</label>
-          <input type="file" class="form-control" name="gambar[]" id="upload" value="{{$kelebihan->gambar}}" multiple>
+          <input type="file" class="form-control" name="gambar" id="upload" value="{{$kelebihan->gambar}}">
       </div>
 
       <div class="form-group col-md-25">
