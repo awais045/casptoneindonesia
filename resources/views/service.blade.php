@@ -29,7 +29,9 @@ $pelayanan = \App\Pelayanan::all();
     <div class="thumb">
     <li class="grey"><img src="{{url('images/'.$key->gambar)}}" class="img-fluid"></li>
     </div>
-    <li>{!!$key->keterangan!!}</li>
+    <div class=" col-md-12 justify-content-left">
+    <p>{!!$key->keterangan!!}</p>
+    </div>
   </ul>
   </div>
 </div>                  @endforeach                                         
