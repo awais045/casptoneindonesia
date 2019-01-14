@@ -45,7 +45,7 @@ Portofolio
   <tbody>
     <tr>
       <td>{{$q->judul}}</td>
-      <td>{{$q->keterangan}}</td>
+      <td>{!!$q->keterangan!!}</td>
     </tr>
   </tbody>
 </table>
