@@ -9,7 +9,7 @@ class About2Controller extends Controller
     public function index()
     {
     	$data = \App\About2::where('id',1)->first();
-        return view('admin.about2')->with('data',$data);
+        return view('admin.about2.index')->with('data',$data);
     }
 
     public function save(Request $r)
