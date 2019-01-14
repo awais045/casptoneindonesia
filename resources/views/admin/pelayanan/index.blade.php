@@ -27,7 +27,7 @@ Pelayanan
             <tr>
               <th scope="row">{{$i++}}</th>
               <td>{{$q->judul}}</td>
-              <td>{{$q->keterangan}}</td>
+              <td>{!! $q->keterangan !!}</td>
               <td><img src="{{ url('images/'.$q->gambar) }}" style="width: 50px; height: 50px"></td>
               <td>
                 <a href="{{url('admin/pelayanan/edit/'.$q->id)}}" class="btn btn-outline-warning btn-sm"><i class="fas fa-pen"></i></a>
