@@ -1,4 +1,6 @@
 @extends('layouts.industry')
+		@section('content')
+				
 @section('title')
 Contact
 @endsection
@@ -23,15 +25,15 @@ Contact
 			<section class="contact-page-area section-gap">
 				<div class="container">
 					<div class="row">
-						<div class="map-wrap" style="width:100%; height: 445px;" id="map"></div>
+					<div class="map-wrap"><div class="gmap_canvas"><iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=Jln.Teratai%20No.47%20RT%20014%2F002%20Kampung%20Makasar%2C%20Jakarta%20Timur&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.pureblack.de"></a></div><style>.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}</style></div>
 						<div class="col-lg-4 d-flex flex-column address-wrap">
 							<div class="single-contact-address d-flex flex-row">
 								<div class="icon">
 									<span class="lnr lnr-home"></span>
 								</div>
 								<div class="contact-details">
-									<h5>Dhaka, Bangladesh</h5>
-									<p>56/8, West Panthapath</p>
+									<h5>Indonesia, DKI Jakarta</h5>
+									<p>Jalan Teratai No.47, Jakarta Timur</p>
 								</div>
 							</div>
 							<div class="single-contact-address d-flex flex-row">
@@ -39,8 +41,8 @@ Contact
 									<span class="lnr lnr-phone-handset"></span>
 								</div>
 								<div class="contact-details">
-									<h5>00 (880) 9865 562</h5>
-									<p>Mon to Fri 9am to 6 pm</p>
+									<h5>0813 9008 0691</h5>
+									<p>Senin Sampai Jumat 10am to 6pm</p>
 								</div>
 							</div>
 							<div class="single-contact-address d-flex flex-row">
@@ -74,8 +76,6 @@ Contact
 					</div>
 				</div>	
 			</section>
-			<!-- End contact-page Area -->
-
 			
 
 			<script src="js/vendor/jquery-2.2.4.min.js"></script>
