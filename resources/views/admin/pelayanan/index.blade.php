@@ -7,6 +7,8 @@ Pelayanan
   <div class="row justify-content-center">
     <div class="col md-8">
           <div class="table-responsive">
+            <div class="pricing-table-new-holder-tables-holder-table__top"><h4 class="pricing-table-new-holder-tables-holder-table-top__title">
+        
           <table class="table" id="example">
           <thead>
             <tr>

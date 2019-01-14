@@ -6,7 +6,11 @@ Edit Kelebihan
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-md-8">
+<<<<<<< HEAD
+
+=======
       <hr>
+>>>>>>> 4c399ac5731fbfaab11c56c26650c37517666c50
       <div class="card">
         <div class="card-header text-white">Edit Kelebihan</div>
         <div class="card-body">

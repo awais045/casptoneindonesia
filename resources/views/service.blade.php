@@ -21,18 +21,18 @@ $pelayanan = \App\Pelayanan::all();
                     </div>                      
                     <div class="row">
                         @foreach($pelayanan as $key)
-                        <div class="col-lg-4">
-                            <div class="single-service">
-                                <div class="thumb">
-                                    <img src="{{url('images/'.$key->gambar)}}" alt="" style="width: 350px; height: 200px;">                                   
-                                </div>
-                                <h4>{{$key->judul}}</h4>
-                                <p>
-                                    {{$key->keterangan}}
-                                </p>
-                            </div>
-                        </div>
-                        @endforeach                                         
+
+<div class="columns">
+    <div class="row-fluid-wrapper">
+  <ul class="price">
+    <li class="header">{{$key->judul}}</li>
+    <div class="thumb">
+    <li class="grey"><img src="{{url('images/'.$key->gambar)}}" class="img-fluid"></li>
+    </div>
+    <li>{{$key->keterangan}}</li>
+  </ul>
+  </div>
+</div>                  @endforeach                                         
                     </div>
                 </div>  
             </section>
