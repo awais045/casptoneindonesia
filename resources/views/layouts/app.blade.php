@@ -54,6 +54,7 @@
                         <li><a class="nav-link" href="{{ url('admin/kelebihan') }}">{{ __('Kelebihan') }}</a></li>
                         <li><a class="nav-link" href="{{ url('admin/pelayanan') }}">{{ __('Pelayanan') }}</a></li>
                         <li><a class="nav-link" href="{{ url('admin/portofolio') }}">{{ __('Portofolio') }}</a></li>
+                        <li><a class="nav-link" href="{{ url('admin/slideshow') }}">{{ __('Slideshow') }}</a></li>              
                         <li><a class="nav-link" href="{{ url('admin/about') }}">{{ __('About') }}</a></li>
                         <li><a class="nav-link" href="{{ url('admin/about2') }}">{{ __('About2') }}</a></li>
                         <li><a class="nav-link" href="{{ url('admin/newsletter') }}">{{ __('Newsletter') }}</a></li>
