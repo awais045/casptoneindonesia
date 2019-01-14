@@ -122,10 +122,10 @@
 								<h6>Follow Us</h6>
 								<p>Let us be social</p>
 								<div class="footer-social d-flex align-items-center">
-									<a href="#"><i class="fa fa-facebook"></i></a>
-									<a href="#"><i class="fa fa-twitter"></i></a>
-									<a href="#"><i class="fa fa-dribbble"></i></a>
-									<a href="#"><i class="fa fa-behance"></i></a>
+									<a href="https://id-id.facebook.com/capstoneindonesia/" target="_blank"><i class="fa fa-facebook"></i></a>
+									<a href="https://twitter.com/capstoneindonesia" target="_blank"><i class="fa fa-twitter"></i></a>
+									<a href="http://capstoneindonesia.net/" target="_blank"><i class="fa fa-dribbble"></i></a>
+									<a href="https://instagram.com/capstoneindonesia?utm_source=ig_profile_share&igshid=ujupo9hirzy5" target="_blank"><i class="fa fa-instagram"></i></a>
 								</div>
 							</div>
 						</div>							

@@ -33,6 +33,10 @@ Route::get('/about', function(){
 	return view('about');
 });
 
+Route::get('/getstarted', function(){
+	return view('getstarted');
+});
+
 Route::get('/contact', function(){
 	return view('contact');
 });

@@ -1,6 +1,6 @@
 @extends('layouts.industry')
 @section('title')
-About
+Get Started
 @endsection
 @section('content')
 			<!-- Start home-about Area -->
