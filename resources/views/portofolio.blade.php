@@ -1,7 +1,4 @@
 @extends('layouts.industry')
-@section('title')
-Portofolio
-@endsection
 @section('content')
 <section class="project-area section-gap" id="project">
     <div class="container">
@@ -19,10 +16,9 @@ Portofolio
               $portofolio = \App\Portofolio::all(); 
                ?>
                @foreach($portofolio as $q)
-            <div class="col-lg-4 col-md-4">
-
-                <a href="#{{$q->id}}" data-toggle="modal" data-traget="#{{$q->id}}" >
-                    <img class="img-fluid" src="{{ url('images/'.$q->gambar)}}" alt="" style="width: 350px; height: 350px;">    
+            <div class="col-md-4">
+                <a href="#{{$q->id}}" data-toggle="modal" data-traget="#{{$q->id}}">
+                    <img class="img-fluid" src="{{ url('images/'.$q->gambar)}}" alt="" style="width: 350px; height: 350px; padding-top: 40px;">    
                     <div class="modal fade" id="{{$q->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -45,9 +41,6 @@ Portofolio
 
              
              @endforeach
-            </div>
-        
-            </div>  
-    </div>  
+            </div> 
 </section>
 @endsection
