@@ -1,5 +1,7 @@
 @extends('layouts.industry')
-
+@section('title')
+Capstone Indonesia
+@endsection
 @section('content')
 
 <?php

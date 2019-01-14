@@ -1,5 +1,7 @@
 @extends('layouts.industry')
-
+@section('title')
+Service
+@endsection
 @section('content')
 
 <?php
