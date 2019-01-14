@@ -12,7 +12,7 @@ class About2Controller extends Controller
         return view('admin.about2.index')->with('data',$data);
     }
 
-    public function save(Request $r)
+    public function update(Request $r)
     {
     	$data = \App\About2::find(1);
         $data->pengantar1 = $r->pengantar1;
