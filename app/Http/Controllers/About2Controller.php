@@ -21,17 +21,4 @@ class About2Controller extends Controller
         $data->save();
         return redirect('admin/about2');
     }
-
-    public function update(Request $r)
-    {
-    	$id = $r->id;
-    	$judul = $r->judul;
-    	$deskripsi = $r->deskripsi;
-
-    	$about2 = About2::find($id);
-    	$about2->judul = $judul;
-    	$about2->deskripsi = $deskripsi;
-    	$about2->save();
-    	return redirect(url('/admin/about2/'));
-    }
 }
