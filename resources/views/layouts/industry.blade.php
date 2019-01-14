@@ -37,10 +37,10 @@
 						<div class="row">
 							<div class="col-lg-6 col-sm-6 col-4 header-top-left no-padding">
 								<ul>
-									<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-									<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-									<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-									<li><a href="#"><i class="fa fa-behance"></i></a></li>
+									<li><a href="https://id-id.facebook.com/capstoneindonesia/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+									<li><a href="https://twitter.com/capstoneindonesia" target="_blank"><i class="fa fa-twitter"></i></a></li>
+									<li><a href="http://capstoneindonesia.net/" target="_blank"><i class="fa fa-chrome"></i></a></li>
+									<li><a href="https://instagram.com/capstoneindonesia?utm_source=ig_profile_share&igshid=ujupo9hirzy5" target="_blank"><i class="fa fa-instagram"></i></a></li>
 								</ul>
 							</div>
 							<?php
@@ -64,14 +64,7 @@
 								<li><a href="{{url('/about')}}">About</a></li>
 								<li><a href="{{url('/service')}}">Service</a></li>
 								<li><a href="{{url('/portofolio')}}">Portofolio</a></li>
-								<li class="menu-has-children"><a href="">Blog</a>
-									<ul>
-										<li><a href="#">Blog Home</a></li>
-										<li><a href="#">Blog Single</a></li>
-									</ul>
-								</li>						          
 								<li><a href="{{ url('contact')}}">Contact</a></li>
-								<li><a href="#">Elements</a></li>
 							</ul>
 						</nav><!-- #nav-menu-container -->		    		
 					</div>
@@ -125,7 +118,7 @@
 								<div class="footer-social d-flex align-items-center">
 									<a href="https://id-id.facebook.com/capstoneindonesia/" target="_blank"><i class="fa fa-facebook"></i></a>
 									<a href="https://twitter.com/capstoneindonesia" target="_blank"><i class="fa fa-twitter"></i></a>
-									<a href="http://capstoneindonesia.net/" target="_blank"><i class="fa fa-dribbble"></i></a>
+									<a href="http://capstoneindonesia.net/" target="_blank"><i class="fa fa-chrome"></i></a>
 									<a href="https://instagram.com/capstoneindonesia?utm_source=ig_profile_share&igshid=ujupo9hirzy5" target="_blank"><i class="fa fa-instagram"></i></a>
 								</div>
 							</div>

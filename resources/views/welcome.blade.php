@@ -7,6 +7,7 @@ $profile = \App\Profile::where('id',1)->first();
 ?>
 <style>
 .bulat{
+border-radius:100em;
 opacity:1;
 width:200px;
 height:200px;
@@ -51,7 +52,7 @@ height:200px;
             <div class="col-lg-4">
                 <div class="single-cat d-flex flex-column" id="backgroud">
                     <!-- <a href="#" class="hb-sm-margin mx-auto d-block"><span class="hb hb-sm inv hb-facebook-inv"><span class="lnr lnr-magic-wand"></span></span></a> -->
-                    <img class="bulat hb-sm-margin mx-auto d-block" src="{{url('images/'.$q->gambar)}}" style="width: 350px;height: 300px;">
+                    <img class="bulat hb-sm-margin mx-auto d-block" src="{{url('images/'.$q->gambar)}}">
                     <h4 class="mb-20" style="margin-top: 23px;">{{$q->judul}}</h4>
                     <p>
                         {{$q->keterangan}}
