@@ -20,7 +20,7 @@ Add Kelebihan
   </div>
   <div class="form-group">
     <label for="inputAddress"></label>
-    <input type="file" class="form-control" name="gambar" id="inputAddress" placeholder="">
+    <input type="file" class="form-control" name="gambar[]" id="upload" placeholder="" multiple>
   </div>
   <br>
   <hr>
