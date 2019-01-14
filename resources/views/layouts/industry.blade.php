@@ -91,11 +91,11 @@
 								?>
 								<h6>About Us</h6>
 								<p>
-									<h1>{{$about2->pengantar1}}</h1>
+									<h1 style="color: white;">{{$about2->pengantar1}}</h1>
 									<br>
-									{{$about2->pengantar2}}
+									<p style="color: white;">{{$about2->pengantar2}}
 									<br>
-									{{$about2->pengantar3}}
+									{{$about2->pengantar3}}</p>
 								</p>
 								<p class="footer-text">
 									<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
