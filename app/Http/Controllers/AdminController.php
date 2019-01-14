@@ -8,6 +8,9 @@ use App\Kelebihan;
 use App\Pelayanan;
 use App\Portofolio;
 use App\Slideshow;
+use App\User;
+use Auth;
+use Hash;
 
 class AdminController extends Controller
 {
@@ -252,5 +255,52 @@ class AdminController extends Controller
         $slideshow = Slideshow::find($id);
         $slideshow->delete();
         return redirect(url('admin/slideshow'));
+    }
+
+    public function datauser()
+    {
+        return view('admin.User.index');
+    }
+
+    public function adduser()
+    {
+        return view('admin.User.add');
+    }
+
+    public function saveuser(Request $r)
+    {
+        $n = new User;
+        $n->name = $r->input('name');
+        $n->email = $r->input('email');
+        $n->password = bcrypt($r->input('password'));
+        $n->save();
+        return redirect(url('admin/datauser'));
+    }    
+
+    public function edituser($id)
+    {
+        $user = User::find($id);
+        return view('admin.User.edit')->with('user',$user);
+    }
+
+    public function updateuser(Request $r)
+    {
+        $u = User::find($r->input('id'));
+        $u->name = $r->input('name');
+        $u->email = $r->input('email');
+        if (Hash::check(Input::get('oldpw'), $u['password']) && Input::get('newpw') == Input::get('confnewpw')) {
+        $u->password = bcrypt(Input::get('newpw'));
+        $u->save();
+        return redirect('admin/datauser')->with('alert', 'Success .. Berhasil menganti password');
+        }else {
+        return redirect('admin/about')->with('alert', 'Oops .. Password yang anda masukan tidak sesuai');
+    }
+    }
+
+    public function deleteuser($id)
+    {
+        $user = User::find($id);
+        $user->delete();
+        return redirect(url('admin/datauser'));
     }
 }

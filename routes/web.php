@@ -71,6 +71,12 @@ Route::group(['prefix' => 'admin'] , function(){
 	Route::get('/slideshow/edit/{id}', 'AdminController@editslideshow');
 	Route::post('/slideshow/update', 'AdminController@updateslideshow');
 	Route::get('/slideshow/delete/{id}', 'AdminController@deleteslideshow');
+	Route::get('/datauser', 'AdminController@datauser');
+	Route::get('/datauser/add', 'AdminController@adduser');
+	Route::post('/datauser/save', 'AdminController@saveuser');
+	Route::get('/datauser/edit/{id}','AdminController@edituser');
+	Route::post('/datauser/update','AdminController@updateuser');
+	Route::get('/datauser/delete/{id}','AdminController@deleteuser');
 
 	Route::get('about','AboutController@index');
 	Route::post('about/save','AboutController@save');
