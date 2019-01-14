@@ -57,7 +57,7 @@ height:200px;
                     <img class="bulat hb-sm-margin mx-auto d-block" src="{{url('images/'.$q->gambar)}}">
                     <h4 class="mb-20" style="margin-top: 23px;">{{$q->judul}}</h4>
                     <p>
-                        {{$q->keterangan}}
+                        {!!$q->keterangan!!}
                     </p>
                 </div>                                                       
             </div>

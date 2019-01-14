@@ -8,7 +8,11 @@ Contact
 
 			<!-- Start contact-page Area -->
 			<section class="contact-page-area section-gap">
+				<form class="a">
+					<h1 class="mb-10 header-text text-center">Contact</h1>			
 				<div class="container">
+					<br>
+					<br>					
 					<div class="row">
 
 					<div class="map-wrap" style="margin-right: 40px;"><div class="gmap_canvas"><iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=Jln.Teratai%20No.47%20RT%20014%2F002%20Kampung%20Makasar%2C%20Jakarta%20Timur&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.pureblack.de"></a></div><style>.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}</style></div>
@@ -42,7 +46,8 @@ Contact
 							</div>														
 						</div>
 					</div>
-				</div>	
+				</div>
+				</form>	
 			</section>
 			
 
