@@ -16,7 +16,7 @@ class CreateKelebihansTable extends Migration
         Schema::create('kelebihans', function (Blueprint $table) {
             $table->increments('id');
             $table->string('judul');
-            $table->string('keterangan');
+            $table->text('keterangan');
             $table->string('gambar');
             $table->timestamps();
         });
