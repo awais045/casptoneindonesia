@@ -91,10 +91,11 @@
 								?>
 								<h6>About Us</h6>
 								<p>
-									{{$about2->judul}}
+									<h1>{{$about2->pengantar1}}</h1>
 									<br>
+									{{$about2->pengantar2}}
 									<br>
-									{{$about2->deskripsi}}
+									{{$about2->pengantar3}}
 								</p>
 								<p class="footer-text">
 									<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
@@ -110,7 +111,7 @@
 									<form  action="{{url('admin/newsletter/save')}}" method="post" 
 									class="form-inline">
 										@csrf
-										<input class="form-control" name="email1" placeholder="Enter Email" required="" type="email">
+										<input class="form-control" name="email" placeholder="Enter Email" required="" type="email">
 										<button class="click-btn btn btn-default" type="submit"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
 
 										<div class="info"></div>
