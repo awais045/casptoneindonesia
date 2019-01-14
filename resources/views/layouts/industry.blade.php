@@ -4,7 +4,7 @@
 		<!-- Mobile Specific Meta -->
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<!-- Favicon-->
-		<link rel="shortcut icon" href="{{ asset ('industry/img/logoo.png')}}">
+		<link rel="shortcut icon" href="{{ asset ('industry/img/fav.png')}}">
 		<!-- Author Meta -->
 		<meta name="author" content="codepixer">
 		<!-- Meta Description -->
@@ -29,7 +29,7 @@
 			<link rel="stylesheet" href="{{ asset ('industry/css/animate.min.css')}}">
 			<link rel="stylesheet" href="{{ asset ('industry/css/owl.carousel.css')}}">
 			<link rel="stylesheet" href="{{ asset ('industry/css/main.css')}}">
-			<link rel="stylesheet" href="{{ asset ('css/pelayanan.css')}}">
+			<link rel="stylesheet" href="{{ asset ('industry/css/pelayanan.css')}}">
 		</head>
 		<body>	
 			<header id="header" id="home">
@@ -80,20 +80,16 @@
 					<div class="row">
 						<div class="col-lg-5 col-md-6 col-sm-6">
 							<div class="single-footer-widget">
-								
+								<?php
+								$about2 = \App\About2::where('id',1)->first();
+								?>
 								<h6>About Us</h6>
 								<p>
-<<<<<<< HEAD
-=======
 									<h1 style="color: white;">{{$about2->pengantar1}}</h1>
->>>>>>> 4c399ac5731fbfaab11c56c26650c37517666c50
 									<br>
 									<p style="color: white;">{{$about2->pengantar2}}
 									<br>
-<<<<<<< HEAD
-=======
 									{{$about2->pengantar3}}</p>
->>>>>>> 4c399ac5731fbfaab11c56c26650c37517666c50
 								</p>
 								<p class="footer-text">
 									<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
