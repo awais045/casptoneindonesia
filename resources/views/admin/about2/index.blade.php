@@ -9,7 +9,7 @@ About
       <div class="card">
         <div class="card-header">About Footer</div>
         <div class="card-body">
-         <form action="{{url('admin/about2/save')}}" method="POST" enctype="multipart/form-data">
+         <form action="{{url('admin/about2/update')}}" method="POST" enctype="multipart/form-data">
           <div class="form-group">
             <label for="formGroupExampleInput">Pengantar 1</label>
             <input type="text" class="form-control" name="pengantar1" id="formGroupExampleInput" 
