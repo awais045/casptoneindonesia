@@ -22,14 +22,31 @@
                     <div class="modal fade" id="{{$q->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-     <img  class="img-fluid" src="{{url('images/'.$q->gambar)}}" style="widows: 250px; height: 280px;">
-      <div class="modal-body"  >
+       <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Deskripsi Gambar</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" style="color: black;">
+ <img class="img-fluid" src="{{url('images/'.$q->gambar)}}" style="width: 300px; height: 200px; display: block; margin-left: auto; margin-right: auto;">
         <br>    
-        <h1 style="color: black;">{{$q->judul}}</h1>
-        <br>
-        <p style="font-size: 15px; color: black;"><i class="fa fa-star" style="color: red;"></i>  {{$q->keterangan}}</p>
-   
-        <button type="button" class="btn btn-danger" data-dismiss="modal" style="float: right;"><i class="fa fa-close"></i></button>
+   <br> 
+   <table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">Judul</th>
+      <th scope="col">Keterangan</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{$q->judul}}</td>
+      <td>{{$q->keterangan}}</td>
+    </tr>
+  </tbody>
+</table>
+
     </div>
   </div>  
   </div>  
