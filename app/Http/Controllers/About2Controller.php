@@ -8,31 +8,18 @@ class About2Controller extends Controller
 {
     public function index()
     {
-    	return view('admin.about2.index');
-    }
-
-    public function add()
-    {
-    	return view('admin.about2.add');
+    	$data = \App\About2::where('id',1)->first();
+        return view('admin.about2')->with('data',$data);
     }
 
     public function save(Request $r)
     {
-    	$judul = $r->judul;
-    	$deskripsi = $r->deskripsi;
-
-    	$about2 = new About2;
-    	$about2->judul = $judul;
-    	$about2->deskripsi = $deskripsi;
-    	$about2->save();
-    	return redirect(url('/admin/about2/'));
-    }
-
-    public function edit($id)
-    {
-    	$about2 = About2::find($id);
-
-    	return view('admin.about2.edit', compact('about2'));
+    	$data = \App\About2::find(1);
+        $data->pengantar1 = $r->pengantar1;
+        $data->pengantar2 = $r->pengantar2;
+        $data->pengantar3 = $r->pengantar3;
+        $data->save();
+        return redirect('admin/about2');
     }
 
     public function update(Request $r)
@@ -45,14 +32,6 @@ class About2Controller extends Controller
     	$about2->judul = $judul;
     	$about2->deskripsi = $deskripsi;
     	$about2->save();
-    	return redirect(url('/admin/about2/'));
-    }
-
-    public function delete($id)
-    {
-    	$about2 = About2::find($id);
-    	$about2->delete();
-
     	return redirect(url('/admin/about2/'));
     }
 }
