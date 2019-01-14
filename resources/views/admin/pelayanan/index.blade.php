@@ -7,6 +7,7 @@ Pelayanan
   <div class="row justify-content-center">
     <div class="col md-8">
           <div class="table-responsive">
+        
           <table class="table" id="example">
           <thead>
             <tr>

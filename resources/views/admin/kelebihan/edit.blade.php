@@ -6,9 +6,8 @@ Edit Kelebihan
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-md-8">
-<<<<<<< HEAD
       <hr>
-      <form action="{{url('admin/kelebihan/save')}}" method="POST" enctype="multipart/form-data">
+      <form action="{{url('admin/kelebihan/update')}}" method="POST" enctype="multipart/form-data">
   <div class="form-row">
     <div class="form-group col-md-6">
       <label for="judul"></label>
@@ -21,14 +20,13 @@ Edit Kelebihan
   </div>
   <div class="form-group">
     <label for="inputAddress"></label>
-    <input type="file" class="form-control" name="gambar" id="inputAddress" value="{{$kelebihan->gambar}}" placeholder="">
+    <input type="file" class="form-control" name="gambar[]" id="upload" value="{{$kelebihan->gambar}}" multiple>
   </div>
   <br>
   <hr>
   <button type="submit" class="btn btn-primary btn-lg"><i class="fas fa-pen"></i></button>
   @csrf
-</form>
-=======
+      </form>
       <div class="card">
         <div class="card-header text-white">Edit Kelebihan</div>
         <div class="card-body">
@@ -52,7 +50,6 @@ Edit Kelebihan
           <button class="btn btn-outline-success float-right" type="submit">Update Data</button>
         </form>
       </div>
->>>>>>> a0331fe35beb5978d96bd5e8ba554398991b522e
     </div>
   </div>
 </div>

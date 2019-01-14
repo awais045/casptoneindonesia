@@ -12,38 +12,20 @@ class NewsletterController extends Controller
    	return view('admin.newsletter.index');
    }
 
-   public function add()
+   public function delete($id)
    {
-   	return view('admin.newsletter.add');
-   }
-
-   public function edit($id)
-   {
-   	$newsletter = Newsletter::find($id);
-
-   	return view('admin.newsletter.edit', compact('newsletter'));
-   }
-
-   public function update(Request $r)
-   {
-   	$id = $r->id;
-   	$email = $r->email1;
-
-   	$newsletter = Newsletter::find($id);
-   	$newsletter->email = $email;
-   	$newsletter->save();
-
-   	return redirect('admin/newsletter');
+      $newsletter = Newsletter::find($id);
+      $newsletter->delete();
+      return redirect(url('admin/newsletter'));
    }
 
    public function save(Request $r)
    {
-   	$email1 = $r->email1;
+      $email = $r->email;
+      $newsletter = new Newsletter;
+      $newsletter->email = $email;
+      $newsletter->save();
 
-   	$newsletter = new Newsletter;
-   	$newsletter->email = $email1;
-   	$newsletter->save();
-
-   	return redirect()->back();
+      return redirect()->back();
    }
 }

@@ -1,0 +1,9 @@
+Route::get('/slider/{filename}', function ($filename)
+{
+	$path = storage_path('images') . '/' . $filename;
+	$file = File::get($path);
+	$type = File::mimeType($path);
+	$response = Response::make($file);
+	$response->header("Content-Type", $type);
+	return $response;
+});

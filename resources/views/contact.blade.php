@@ -1,7 +1,24 @@
 @extends('layouts.industry')
 		@section('content')
 				
-			
+@section('title')
+Contact
+@endsection
+@section('content')
+			<!-- start banner Area -->
+			<section class="banner-area relative" id="home">	
+				<div class="overlay overlay-bg"></div>
+				<div class="container">				
+					<div class="row d-flex align-items-center justify-content-center">
+						<div class="about-content col-lg-12">
+							<h1 class="text-white">
+								Contact Us				
+							</h1>	
+							<p class="text-white link-nav"><a href="index.html">Home </a>  <span class="lnr lnr-arrow-right"></span>  <a href="contact.html"> Contact Us</a></p>
+						</div>	
+					</div>
+				</div>
+			</section>
 			<!-- End banner Area -->				  
 
 			<!-- Start contact-page Area -->
@@ -59,9 +76,6 @@
 					</div>
 				</div>	
 			</section>
-			<!-- End contact-page Area -->
-
-			<!-- start footer Area -->		
 			
 
 			<script src="js/vendor/jquery-2.2.4.min.js"></script>

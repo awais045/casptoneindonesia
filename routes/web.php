@@ -33,6 +33,10 @@ Route::get('/about', function(){
 	return view('about');
 });
 
+Route::get('/getstarted', function(){
+	return view('getstarted');
+});
+
 Route::get('/contact', function(){
 	return view('contact');
 });
@@ -61,21 +65,21 @@ Route::group(['prefix' => 'admin'] , function(){
 	Route::get('/portofolio/edit/{id}', 'AdminController@editportofolio');
 	Route::post('/portofolio/update', 'AdminController@updateportofolio');
 	Route::get('/portofolio/delete/{id}', 'AdminController@deleteportofolio');
+	Route::get('/slideshow', 'AdminController@indexslideshow');
+	Route::get('/slideshow/add', 'AdminController@addslideshow');
+	Route::post('/slideshow/save', 'AdminController@saveslideshow');
+	Route::get('/slideshow/edit/{id}', 'AdminController@editslideshow');
+	Route::post('/slideshow/update', 'AdminController@updateslideshow');
+	Route::get('/slideshow/delete/{id}', 'AdminController@deleteslideshow');
+
 	Route::get('about','AboutController@index');
 	Route::post('about/save','AboutController@save');
 
 	Route::get('/about2/', 'About2Controller@index');
-	Route::get('/about2/add', 'About2Controller@add');
-	Route::post('/about2/save', 'About2Controller@save');
-	Route::get('/about2/edit/{id}', 'About2Controller@edit');
 	Route::post('/about2/update', 'About2Controller@update');
-	Route::get('/about2/delete/{id}', 'About2Controller@delete');
 
 	Route::get('/newsletter/', 'NewsletterController@index');
-	Route::get('/newsletter/edit/{id}', 'NewsletterController@edit');
 	Route::get('/newsletter/delete/{id}', 'NewsletterController@delete');
-	Route::get('/newsletter/add', 'NewsletterController@add');
-	Route::post('/newsletter/update', 'NewsletterController@update');
 	Route::post('/newsletter/save', 'NewsletterController@save');
 });
 

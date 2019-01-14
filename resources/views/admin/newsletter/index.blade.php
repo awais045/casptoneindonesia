@@ -25,7 +25,6 @@ Newsletter
               <th scope="row">{{$i++}}</th>
               <td>{{$q->email}}</td>
               <td>
-                <a href="{{url('admin/newsletter/edit/'.$q->id)}}" class="btn btn-outline-warning btn-sm"><i class="fas fa-pen"></i></a>
                  <a href="{{url('admin/newsletter/delete/'.$q->id)}}" onclick="return confirm('anda yakin untuk menghapusnya ?')"
                  class="btn btn-outline-danger btn-sm"><i class="fas fa-trash"></i></a>
               </td>
@@ -35,7 +34,6 @@ Newsletter
         </table>
         </div>
         <hr>
-          <a href="{{url('admin/ke/add')}}" class="btn btn-outline-primary btn-lg"><i class="fas fa-plus-square"></i></a>
       </div>
     </div>
   </div>
