@@ -60,7 +60,7 @@
 						</div>
 						<nav id="nav-menu-container">
 							<ul class="nav-menu">
-								<li class="menu-active"><a href="#">Home</a></li>
+								<li class="menu-active"><a href="{{url('/')}}">Home</a></li>
 								<li><a href="{{url('/about')}}">About</a></li>
 								<li><a href="{{url('/service')}}">Service</a></li>
 								<li><a href="{{url('/portofolio')}}">Portofolio</a></li>
