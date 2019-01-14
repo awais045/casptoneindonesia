@@ -19,42 +19,22 @@
             <div class="col-lg-4 col-md-4">
 
                 <a href="#{{$q->id}}" data-toggle="modal" data-traget="#{{$q->id}}" >
-                    <img class="img-fluid" src="{{ url('images/'.$q->gambar)}}" alt="" style="width: 350px; height: 300px;">    
+                    <img class="img-fluid" src="{{ url('images/'.$q->gambar)}}" alt="" style="width: 350px; height: 350px;">    
                     <div class="modal fade" id="{{$q->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Deskripsi</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body"  style="color: black; font-size: 15px;">
-        <div class="text-center">
-        <img src="{{url('images/'.$q->gambar)}}" class="img-fluid" style="width: 466px; height: 250px;">
-        </div>
+     <img  class="img-fluid" src="{{url('images/'.$q->gambar)}}" style="widows: 250px; height: 280px;">
+      <div class="modal-body"  >
         <br>    
-<div class="table-responsive"> 
-<table id="" class="table table-bordered">
-  <thead>
-    <tr>
-      <th scope="col">Judul</th>
-      <th scope="col">Keterangan</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{$q->judul}}</td>
-      <td>{{$q->keterangan}}</td>
+        <h1 style="color: black;">{{$q->judul}}</h1>
+        <br>
+        <p style="font-size: 15px; color: black;"><i class="fa fa-star" style="color: red;"></i>  {{$q->keterangan}}</p>
    
-    </tr>
-  </tbody>
-</table>
-      </div>
+        <button type="button" class="btn btn-danger" data-dismiss="modal" style="float: right;"><i class="fa fa-close"></i></button>
     </div>
   </div>  
   </div>  
-                </a>    
+             
             </div>
         
             </div>   

@@ -23,6 +23,7 @@
 			<link rel="stylesheet" href="{{ asset ('industry/css/linearicons.css')}}">
 			<link rel="stylesheet" href="{{ asset ('industry/css/font-awesome.min.css')}}">
 			<link rel="stylesheet" href="{{ asset ('industry/css/bootstrap.css')}}">
+			
 			<link rel="stylesheet" href="{{ asset ('industry/css/magnific-popup.css')}}">
 			<link rel="stylesheet" href="{{ asset ('industry/css/nice-select.css')}}">	
 			<link rel="stylesheet" href="{{ asset ('industry/css/hexagons.min.css')}}">							
