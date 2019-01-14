@@ -36,22 +36,20 @@ class AdminController extends Controller
 
     public function savekelebihan(Request $r)
     {
-
-        if (Input::hasFile('gambar')) {
-      $files = Input::file('gambar');
-      foreach($files as $gambar) {
-        $gambar2 = date("YmdHis").uniqid()."."
-        .$gambar->getClientOriginalExtension();
-        $gambar->move(storage_path('images'), $gambar2);
-        Kelebihan::create([
-            'judul' => $r->input('judul'),
-            'keterangan' => $r->input('keterangan'),
-            'gambar' => $gambar2,
-          ]);
-    }   
-    }
+      $n = new Kelebihan;
+      $n->judul = $r->input('judul');
+      $n->keterangan = $r->input('keterangan');
+      if(Input::hasFile('gambar')){
+            $gambar = date("YmdHis")
+            .uniqid()
+            ."."
+            .Input::file('gambar')->getClientOriginalExtension();
+            Input::file('gambar')->move(storage_path('images'),$gambar);
+            $n->gambar = $gambar;
+        }
+        $n->save();
         return redirect(url('admin/kelebihan'));
-}
+    }
 
     public function editkelebihan($id)
     {
@@ -61,19 +59,19 @@ class AdminController extends Controller
 
     public function updatekelebihan(Request $r)
     {
-        if (Input::hasFile('gambar')) {
-      $files = Input::file('gambar');
-      foreach($files as $gambar) {
-        $gambar2 = date("YmdHis").uniqid()."."
-        .$gambar->getClientOriginalExtension();
-        $gambar->move(storage_path('images'), $gambar2);
-        Kelebihan::create([
-            'judul' => $r->input('judul'),
-            'keterangan' => $r->input('keterangan'),
-            'gambar' => $gambar2,
-          ]);
-    }   
-    }
+        $u = Kelebihan::find($r->input('id'));
+        $u->judul = $r->input('judul');
+        $u->keterangan = $r->input('keterangan');
+
+        if(Input::hasFile('gambar')){
+            $gambar = date("YmdHis")
+            .uniqid()
+            ."."
+            .Input::file('gambar')->getClientOriginalExtension();
+            Input::file('gambar')->move(storage_path('images'),$gambar);
+            $u->gambar = $gambar;
+        }
+        $u->save();
         return redirect(url('admin/kelebihan'));
     }
 
@@ -96,19 +94,18 @@ class AdminController extends Controller
 
     public function savepelayanan(Request $r)
     {
-        if (Input::hasFile('gambar')) {
-      $files = Input::file('gambar');
-      foreach($files as $gambar) {
-        $gambar2 = date("YmdHis").uniqid()."."
-        .$gambar->getClientOriginalExtension();
-        $gambar->move(storage_path('images'), $gambar2);
-        Pelayanan::create([
-            'judul' => $r->input('judul'),
-            'keterangan' => $r->input('keterangan'),
-            'gambar' => $gambar2,
-          ]);
-    }   
-    }
+       $n = new Pelayanan;
+      $n->judul = $r->input('judul');
+      $n->keterangan = $r->input('keterangan');
+      if(Input::hasFile('gambar')){
+            $gambar = date("YmdHis")
+            .uniqid()
+            ."."
+            .Input::file('gambar')->getClientOriginalExtension();
+            Input::file('gambar')->move(storage_path('images'),$gambar);
+            $n->gambar = $gambar;
+        }
+        $n->save();
         return redirect(url('admin/pelayanan'));
     }
 
@@ -120,19 +117,18 @@ class AdminController extends Controller
 
     public function updatepelayanan(Request $r)
     {
-        if (Input::hasFile('gambar')) {
-      $files = Input::file('gambar');
-      foreach($files as $gambar) {
-        $gambar2 = date("YmdHis").uniqid()."."
-        .$gambar->getClientOriginalExtension();
-        $gambar->move(storage_path('images'), $gambar2);
-        Pelayanan::create([
-            'judul' => $r->input('judul'),
-            'keterangan' => $r->input('keterangan'),
-            'gambar' => $gambar2,
-          ]);
-    }   
-    }
+         $u = Pelayanan::find($r->input('id'));
+      $u->judul = $r->input('judul');
+      $u->keterangan = $r->input('keterangan');
+      if(Input::hasFile('gambar')){
+            $gambar = date("YmdHis")
+            .uniqid()
+            ."."
+            .Input::file('gambar')->getClientOriginalExtension();
+            Input::file('gambar')->move(storage_path('images'),$gambar);
+            $u->gambar = $gambar;
+        }
+        $u->save();
         return redirect(url('admin/pelayanan'));
     }
 
@@ -155,19 +151,18 @@ class AdminController extends Controller
 
     public function saveportofolio(Request $r)
     {
-        if (Input::hasFile('gambar')) {
-      $files = Input::file('gambar');
-      foreach($files as $gambar) {
-        $gambar2 = date("YmdHis").uniqid()."."
-        .$gambar->getClientOriginalExtension();
-        $gambar->move(storage_path('images'), $gambar2);
-        Portofolio::create([
-            'judul' => $r->input('judul'),
-            'keterangan' => $r->input('keterangan'),
-            'gambar' => $gambar2,
-          ]);
-    }   
-    }
+         $n = new Portofolio;
+      $n->judul = $r->input('judul');
+      $n->keterangan = $r->input('keterangan');
+      if(Input::hasFile('gambar')){
+            $gambar = date("YmdHis")
+            .uniqid()
+            ."."
+            .Input::file('gambar')->getClientOriginalExtension();
+            Input::file('gambar')->move(storage_path('images'),$gambar);
+            $n->gambar = $gambar;
+        }
+        $n->save();
         return redirect(url('admin/portofolio'));
     }
 
@@ -179,19 +174,18 @@ class AdminController extends Controller
 
     public function updateportofolio(Request $r)
     {
-        if (Input::hasFile('gambar')) {
-      $files = Input::file('gambar');
-      foreach($files as $gambar) {
-        $gambar2 = date("YmdHis").uniqid()."."
-        .$gambar->getClientOriginalExtension();
-        $gambar->move(storage_path('images'), $gambar2);
-        Portofolio::create([
-            'judul' => $r->input('judul'),
-            'keterangan' => $r->input('keterangan'),
-            'gambar' => $gambar2,
-          ]);
-    }   
-    }
+        $u = Portofolio::find($r->input('id'));
+      $u->judul = $r->input('judul');
+      $u->keterangan = $r->input('keterangan');
+      if(Input::hasFile('gambar')){
+            $gambar = date("YmdHis")
+            .uniqid()
+            ."."
+            .Input::file('gambar')->getClientOriginalExtension();
+            Input::file('gambar')->move(storage_path('images'),$gambar);
+            $u->gambar = $gambar;
+        }
+        $u->save();
         return redirect(url('admin/portofolio'));
     }
 

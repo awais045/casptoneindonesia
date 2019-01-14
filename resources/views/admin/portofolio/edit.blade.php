@@ -20,10 +20,11 @@ Edit Portofolio
   </div>
   <div class="form-group">
     <label for="inputAddress"></label>
-    <input type="file" class="form-control" name="gambar[]" id="upload" value="{{$portofolio->gambar}}" multiple>
+    <input type="file" class="form-control" name="gambar" id="upload" value="{{$portofolio->gambar}}">
   </div>
   <br>
   <hr>
+  <input type="hidden" name="id" value="{{$portofolio->id}}">
   <button type="submit" class="btn btn-primary btn-lg"><i class="fas fa-pen"></i></button>
   @csrf
 </form>

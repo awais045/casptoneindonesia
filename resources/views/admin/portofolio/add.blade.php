@@ -20,7 +20,7 @@ Add Portofolio
   </div>
   <div class="form-group">
     <label for="inputAddress"></label>
-    <input type="file" class="form-control" name="gambar[]" id="upload" multiple>
+    <input type="file" class="form-control" name="gambar" id="upload">
   </div>
   <br>
   <hr>
