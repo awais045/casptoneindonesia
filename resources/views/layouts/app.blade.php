@@ -56,9 +56,10 @@
                         <li><a class="nav-link" href="{{ url('admin/portofolio') }}">{{ __('Portofolio') }}</a></li>
                         <li><a class="nav-link" href="{{ url('admin/slideshow') }}">{{ __('Slideshow') }}</a></li>              
                         <li><a class="nav-link" href="{{ url('admin/about') }}">{{ __('About') }}</a></li>
-                        <li><a class="nav-link" href="{{ url('admin/about2') }}">{{ __('About2') }}</a></li>
+                        <li><a class="nav-link" href="{{ url('admin/about2') }}">{{ __('Footer') }}</a></li>
                         <li><a class="nav-link" href="{{ url('admin/newsletter') }}">{{ __('Newsletter') }}</a></li>
-                        <li><a class="nav-link" href="{{ url('admin/datauser') }}">{{ __('Data User') }}</a></li>
+                        <li><a class="nav-link" href="{{ url('admin/client') }}">{{ __('Client') }}</a></li>
+                        <li><a class="nav-link" href="{{ url('admin/teknologi') }}">{{ __('Teknologi') }}</a></li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>

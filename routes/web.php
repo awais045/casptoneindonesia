@@ -71,12 +71,6 @@ Route::group(['prefix' => 'admin'] , function(){
 	Route::get('/slideshow/edit/{id}', 'AdminController@editslideshow');
 	Route::post('/slideshow/update', 'AdminController@updateslideshow');
 	Route::get('/slideshow/delete/{id}', 'AdminController@deleteslideshow');
-	Route::get('/datauser', 'AdminController@datauser');
-	Route::get('/datauser/add', 'AdminController@adduser');
-	Route::post('/datauser/save', 'AdminController@saveuser');
-	Route::get('/datauser/edit/{id}','AdminController@edituser');
-	Route::post('/datauser/update','AdminController@updateuser');
-	Route::get('/datauser/delete/{id}','AdminController@deleteuser');
 
 	Route::get('about','AboutController@index');
 	Route::post('about/save','AboutController@save');
@@ -87,6 +81,20 @@ Route::group(['prefix' => 'admin'] , function(){
 	Route::get('/newsletter/', 'NewsletterController@index');
 	Route::get('/newsletter/delete/{id}', 'NewsletterController@delete');
 	Route::post('/newsletter/save', 'NewsletterController@save');
+
+	Route::get('/client', 'ClientController@index');
+	Route::get('/client/add', 'ClientController@add');
+	Route::post('/client/save', 'ClientController@save');
+	Route::get('/client/edit/{id}', 'ClientController@edit');
+	Route::post('/client/update', 'ClientController@update');
+	Route::get('/client/delete/{id}', 'ClientController@delete');
+
+	Route::get('/teknologi', 'TeknologiController@index');
+	Route::get('/teknologi/add', 'TeknologiController@add');
+	Route::post('/teknologi/save', 'TeknologiController@save');
+	Route::get('/teknologi/edit/{id}', 'TeknologiController@edit');
+	Route::post('/teknologi/update', 'TeknologiController@update');
+	Route::get('/teknologi/delete/{id}', 'TeknologiController@delete');
 });
 
 Route::group(['prefix' => 'about'], function(){
