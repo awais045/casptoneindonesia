@@ -38,10 +38,10 @@
 						<div class="row">
 							<div class="col-lg-6 col-sm-6 col-4 header-top-left no-padding">
 								<ul>
-									<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-									<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-									<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-									<li><a href="#"><i class="fa fa-behance"></i></a></li>
+									<li><a href="https://id-id.facebook.com/capstoneindonesia/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+									<li><a href="https://twitter.com/capstoneindonesia" target="_blank"><i class="fa fa-twitter"></i></a></li>
+									<li><a href="http://capstoneindonesia.net/" target="_blank"><i class="fa fa-chrome"></i></a></li>
+									<li><a href="https://instagram.com/capstoneindonesia?utm_source=ig_profile_share&igshid=ujupo9hirzy5" target="_blank"><i class="fa fa-instagram"></i></a></li>
 								</ul>
 							</div>
 							<?php
@@ -61,18 +61,11 @@
 						</div>
 						<nav id="nav-menu-container">
 							<ul class="nav-menu">
-								<li class="menu-active"><a href="#">Home</a></li>
+								<li class="menu-active"><a href="{{url('/')}}">Home</a></li>
 								<li><a href="{{url('/about')}}">About</a></li>
 								<li><a href="{{url('/service')}}">Service</a></li>
 								<li><a href="{{url('/portofolio')}}">Portofolio</a></li>
-								<li class="menu-has-children"><a href="">Blog</a>
-									<ul>
-										<li><a href="#">Blog Home</a></li>
-										<li><a href="#">Blog Single</a></li>
-									</ul>
-								</li>						          
-								<li><a href="#">Contact</a></li>
-								<li><a href="#">Elements</a></li>
+								<li><a href="{{ url('contact')}}">Contact</a></li>
 							</ul>
 						</nav><!-- #nav-menu-container -->		    		
 					</div>
@@ -90,8 +83,17 @@
 								
 								<h6>About Us</h6>
 								<p>
+<<<<<<< HEAD
+=======
+									<h1 style="color: white;">{{$about2->pengantar1}}</h1>
+>>>>>>> 4c399ac5731fbfaab11c56c26650c37517666c50
 									<br>
+									<p style="color: white;">{{$about2->pengantar2}}
 									<br>
+<<<<<<< HEAD
+=======
+									{{$about2->pengantar3}}</p>
+>>>>>>> 4c399ac5731fbfaab11c56c26650c37517666c50
 								</p>
 								<p class="footer-text">
 									<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
@@ -107,7 +109,7 @@
 									<form  action="{{url('admin/newsletter/save')}}" method="post" 
 									class="form-inline">
 										@csrf
-										<input class="form-control" name="email1" placeholder="Enter Email" required="" type="email">
+										<input class="form-control" name="email" placeholder="Enter Email" required="" type="email">
 										<button class="click-btn btn btn-default" type="submit"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
 
 										<div class="info"></div>
@@ -119,10 +121,10 @@
 								<h6>Follow Us</h6>
 								<p>Let us be social</p>
 								<div class="footer-social d-flex align-items-center">
-									<a href="#"><i class="fa fa-facebook"></i></a>
-									<a href="#"><i class="fa fa-twitter"></i></a>
-									<a href="#"><i class="fa fa-dribbble"></i></a>
-									<a href="#"><i class="fa fa-behance"></i></a>
+									<a href="https://id-id.facebook.com/capstoneindonesia/" target="_blank"><i class="fa fa-facebook"></i></a>
+									<a href="https://twitter.com/capstoneindonesia" target="_blank"><i class="fa fa-twitter"></i></a>
+									<a href="http://capstoneindonesia.net/" target="_blank"><i class="fa fa-chrome"></i></a>
+									<a href="https://instagram.com/capstoneindonesia?utm_source=ig_profile_share&igshid=ujupo9hirzy5" target="_blank"><i class="fa fa-instagram"></i></a>
 								</div>
 							</div>
 						</div>							

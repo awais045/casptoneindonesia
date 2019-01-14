@@ -15,8 +15,9 @@ class CreateAbout2sTable extends Migration
     {
         Schema::create('about2s', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('judul');
-            $table->string('deskripsi');
+            $table->string('pengantar1');
+            $table->string('pengantar2');
+            $table->text('pengantar3');
             $table->timestamps();
         });
     }
