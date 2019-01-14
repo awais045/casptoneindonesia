@@ -29,6 +29,7 @@
 			<link rel="stylesheet" href="{{ asset ('industry/css/animate.min.css')}}">
 			<link rel="stylesheet" href="{{ asset ('industry/css/owl.carousel.css')}}">
 			<link rel="stylesheet" href="{{ asset ('industry/css/main.css')}}">
+			<link rel="stylesheet" href="{{ asset ('css/pelayanan.css')}}">
 		</head>
 		<body>	
 			<header id="header" id="home">
@@ -86,15 +87,11 @@
 					<div class="row">
 						<div class="col-lg-5 col-md-6 col-sm-6">
 							<div class="single-footer-widget">
-								<?php
-								$about2 = \App\About2::where('id',1)->first();
-								?>
+								
 								<h6>About Us</h6>
 								<p>
-									{{$about2->judul}}
 									<br>
 									<br>
-									{{$about2->deskripsi}}
 								</p>
 								<p class="footer-text">
 									<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->

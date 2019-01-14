@@ -15,7 +15,7 @@ Add Pelayanan
     </div>
     <div class="form-group col-md-6">
       <label for="inputPassword4"></label>
-      <input type="text" class="form-control" name="keterangan" id="inputPassword4" placeholder="Keterangan">
+      <textarea type="text" class="form-control" name="keterangan" id="inputPassword4" placeholder="Keterangan"></textarea>
     </div>
   </div>
   <div class="form-group">
